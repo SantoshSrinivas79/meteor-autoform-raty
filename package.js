@@ -1,7 +1,7 @@
 Package.describe({
   name: 'andrei:autoform-raty',
   version: '0.0.1',
-  summary: '',
+  summary: 'AutoForm input type for Raty, a jQuery star rating form control',
   git: 'https://github.com/andreivolt/meteor-autoform-raty',
   documentation: 'README.md'
 });
