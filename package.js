@@ -6,10 +6,9 @@ Package.describe({
   documentation: 'README.md'
 });
 
-var path = Npm.require('path');
-var fs = Npm.require('fs');
-
 Package.onUse(function(api) {
+  api.versionsFrom('1.0');
+
   api.use([
     'aldeed:autoform@5.0.0',
     'coffeescript',
@@ -17,19 +16,21 @@ Package.onUse(function(api) {
     'templating'
   ]);
 
-  var packageRoot = path.join(path.resolve('.'), 'packages', 'andrei:autoform-raty');
-
-  var files = fs.readdirSync(path.join(packageRoot, 'raty', 'lib', 'fonts')).map(function(fName){
-    return path.join('raty', 'lib', 'fonts', fName);
-  });
-  files = files
-    .concat(fs.readdirSync(path.join(packageRoot, 'raty', 'lib', 'images')).map(function(fName){
-        return path.join('raty', 'lib', 'images', fName);
-     }))
-    .concat(['raty/lib/jquery.raty.css', 'raty/lib/jquery.raty.js'])
-    .concat(['main.jade', 'main.coffee'])
-
-  api.addFiles(files, 'client');
-
-  api.versionsFrom('1.0');
+  api.addFiles([
+    'raty/lib/fonts/raty.eot',
+    'raty/lib/fonts/raty.svg',
+    'raty/lib/fonts/raty.ttf',
+    'raty/lib/fonts/raty.woff',
+    'raty/lib/images/cancel-off.png',
+    'raty/lib/images/cancel-on.png',
+    'raty/lib/images/star-half.png',
+    'raty/lib/images/star-off.png',
+    'raty/lib/images/star-on.png',
+    'raty/lib/jquery.raty.css',
+    'raty/lib/jquery.raty.js',
+    'raty/lib/jquery.raty.css',
+    'raty/lib/jquery.raty.js',
+    'main.jade',
+    'main.coffee'
+  ], 'client');
 });
