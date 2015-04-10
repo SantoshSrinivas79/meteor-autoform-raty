@@ -1,3 +1,4 @@
 [submodule "raty"]
 	path = raty
 	url = https://github.com/wbotelhos/raty
+	branch = master
