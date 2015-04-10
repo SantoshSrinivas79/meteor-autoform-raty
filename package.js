@@ -17,12 +17,13 @@ Package.onUse(function(api) {
     'templating'
   ]);
 
-  var packagePath = path.join(path.resolve('.'), 'packages', 'andrei:autoform-raty');
-  var files = fs.readdirSync(path.join(packagePath, 'raty', 'lib', 'fonts')).map(function(fName){
+  var packageRoot = path.join(path.resolve('.'), 'packages', 'andrei:autoform-raty');
+
+  var files = fs.readdirSync(path.join(packageRoot, 'raty', 'lib', 'fonts')).map(function(fName){
     return path.join('raty', 'lib', 'fonts', fName);
   });
   files = files
-    .concat(fs.readdirSync(path.join(packagePath, 'raty', 'lib', 'images')).map(function(fName){
+    .concat(fs.readdirSync(path.join(packageRoot, 'raty', 'lib', 'images')).map(function(fName){
         return path.join('raty', 'lib', 'images', fName);
      }))
     .concat(['raty/lib/jquery.raty.css', 'raty/lib/jquery.raty.js'])
