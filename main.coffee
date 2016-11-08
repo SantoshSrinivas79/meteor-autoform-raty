@@ -11,7 +11,7 @@ Template.afRaty.helpers
 
 Template.afRaty.rendered = ->
   basePath = '/packages/andrei_autoform-raty/raty/lib/images'
-  $('.raty').raty _.defaults @data.atts.ratyOptions,
+  @$('.raty').raty _.defaults @data.atts.ratyOptions,
     starHalf: "#{basePath}/star-half.png"
     starOff: "#{basePath}/star-off.png"
     starOn: "#{basePath}/star-on.png"
