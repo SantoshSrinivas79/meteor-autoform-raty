@@ -1,6 +1,6 @@
 Package.describe({
   name: 'andrei:autoform-raty',
-  version: '0.0.1',
+  version: '0.0.3',
   summary: 'AutoForm input type for Raty, a jQuery star rating form control',
   git: 'https://github.com/andreivolt/meteor-autoform-raty',
   documentation: 'README.md'
@@ -17,6 +17,11 @@ Package.onUse(function(api) {
   ]);
 
   api.addFiles([
+    'main.jade',
+    'main.coffee'
+  ], 'client');
+
+	api.addAssets([
     'raty/lib/fonts/raty.eot',
     'raty/lib/fonts/raty.svg',
     'raty/lib/fonts/raty.ttf',
@@ -27,10 +32,6 @@ Package.onUse(function(api) {
     'raty/lib/images/star-off.png',
     'raty/lib/images/star-on.png',
     'raty/lib/jquery.raty.css',
-    'raty/lib/jquery.raty.js',
-    'raty/lib/jquery.raty.css',
-    'raty/lib/jquery.raty.js',
-    'main.jade',
-    'main.coffee'
-  ], 'client');
+    'raty/lib/jquery.raty.js'
+	], 'client');
 });
