@@ -12,7 +12,7 @@ Package.onUse(function(api) {
   api.use([
     'aldeed:autoform@5.0.0',
     'coffeescript',
-		'dalgard:jade',
+		'dalgard:jade@0.5.4_1',
     'templating'
   ]);
 
