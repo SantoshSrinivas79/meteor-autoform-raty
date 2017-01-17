@@ -7,8 +7,8 @@ blaze-tools@1.0.10
 callback-hook@1.0.9
 check@1.0.6
 coffeescript@1.0.6
-dalgard:jade@0.4.3
-dalgard:jade-compiler@0.4.3
+dalgard:jade@0.5.4_1
+dalgard:jade-compiler@0.5.4_1
 ddp@1.0.14
 deps@1.0.12
 ejson@1.0.12
