@@ -10,7 +10,7 @@ Package.onUse(function(api) {
   api.versionsFrom('1.0');
 
   api.use([
-		'aldeed:autoform@5.8.1',
+		'aldeed:autoform@6.2.0',
     'coffeescript',
 		'dalgard:jade@0.5.4_1',
     'templating'
@@ -18,7 +18,8 @@ Package.onUse(function(api) {
 
   api.addFiles([
     'main.jade',
-    'main.coffee'
+    'main.js',
+    'raty/lib/jquery.raty.js'
   ], 'client');
 
 	api.addAssets([
@@ -32,6 +33,5 @@ Package.onUse(function(api) {
     'raty/lib/images/star-off.png',
     'raty/lib/images/star-on.png',
     'raty/lib/jquery.raty.css',
-    'raty/lib/jquery.raty.js'
 	], 'client');
 });
